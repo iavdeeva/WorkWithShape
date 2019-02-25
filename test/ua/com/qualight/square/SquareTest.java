@@ -6,8 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import ua.com.qalight.square.Square;
 
-class SquareTest {
+public class SquareTest {
 
+	
 	@Test
 	void testGetAreaWithZero() {
 		Square square = new Square(0);

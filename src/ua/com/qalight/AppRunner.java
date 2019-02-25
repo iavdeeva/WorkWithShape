@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 import ua.com.qalight.circle.Circle;
 import ua.com.qalight.square.Square;
-import ua.com.qalight.triangle.Triangle;
+
 
 public class AppRunner {
 	
