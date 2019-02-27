@@ -5,9 +5,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
 
+import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
+
 import ua.com.qalight.abstraction.Shape;
 import ua.com.qalight.circle.Circle;
 import ua.com.qalight.square.Square;
+import ua.com.qalight.triangle.Triangle;
 
 
 
@@ -39,6 +42,17 @@ public class AppRunner {
 		shapes.add((Circle)circle3);
 		shapes.add((Circle)circle3);
 		
+		Shape triangle1 = new Triangle(10,5);
+		Shape triangle2 = new Triangle(100, 50);
+		Shape triangle3 = new Triangle(1000, 500);
+		Shape triangle4 = new Triangle(10000, 5000);
+		
+		shapes.add(triangle1);
+		shapes.add(triangle2);
+		shapes.add(triangle3);
+		shapes.add(triangle4);
+		
+		
 		
 		Shape maxShape = shapes.get(0);
 		Shape minShape = shapes.get(0);
@@ -51,7 +65,17 @@ public class AppRunner {
 		}
 		}
 		
-		logger.info("Spape " + maxShape.getClass().getSimpleName() + "has area " + maxShape.getArea());
+		logger.info("Shape " + maxShape.getClass().getSimpleName() + "has area " + maxShape.getArea());
+		
+		for (int i = 0; i < shapes.size(); i = i++) {
+			logger.info("Square with side " + shapes.getClass().getSimpleName() + " has area " + shapes.get(i).getArea());
+		
+		if(minShape.getArea() < shapes.get(i).getArea()) {
+			minShape = shapes.get(i);
+		}
+		}
+		
+		logger.info("Shape " + minShape.getClass().getSimpleName() + " has area " + minShape.getArea());
 		
 		logger.info("end");
 		
@@ -63,7 +87,12 @@ public class AppRunner {
 		    
 		    logger.info("Circle with radius " + circle.getRadius() + " has area " + circle.getArea());
 		    
-		    String line = "fgjhkjl gyuhi jgiui ghuhu gjkhlijl";
+		   Triangle triangle = new Triangle (10, 5);
+		   
+		   logger.info("Triangle with base " + triangle.getBase() + " and heigth " + triangle.getHeigth() + " has area " + triangle.getArea());
+		    
+		    
+		   String line = "fgjhkjl gyuhi jgiui ghuhu gjkhlijl";
 		    
 		    String[] words = line.split(" ");
 		    
