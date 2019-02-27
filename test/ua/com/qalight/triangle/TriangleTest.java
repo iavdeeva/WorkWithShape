@@ -10,20 +10,20 @@ class TriangleTest {
 	void testGetAreaWithZero() {
 		Triangle triangle = new Triangle();
 		assertNotNull (triangle.getArea());
-		asserEquals(0, triangle.getArea());
+		assertEquals(0, triangle.getArea());
 	}	
 	@Test
 	void testGetAreaWithOne() {
 		Triangle triangle = new Triangle();
 		assertNotNull (triangle.getArea());
-		asserEquals (1, triangle.getArea());
+		assertEquals (1, triangle.getArea());
 		
 	}
 	@Test
 	void testGetAreaWithTen() {
 		Triangle triangle = new Triangle();
 		assertNotNull (triangle.getArea());
-		asserEquals (100, triangle.getArea());
+		assertEquals (100, triangle.getArea());
 	}
 
 }
